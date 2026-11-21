@@ -9,15 +9,97 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <header>
+      <nav class="navbar navbar-expand navbar-dark border-bottom border-secondary">
         <div class="container">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
-                <li class="nav-item"><a class="nav-link" href="dining.html">Dining</a></li>
-            </ul>
+          <ul class="navbar-nav w-100 justify-content-around">
+            <li class="nav-item">
+              <a class="nav-link active fw-semibold" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="event.html">event</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Dining.html">Dining</a>
+            </li>
+          </ul>
         </div>
-    </nav>
+      </nav>
+    </header>
+    <main class="container my-4 flex-grow-1">
+      <section id="app-info" class="p-4 mb-4 border border-secondary rounded">
+        <h1 class="h3 mb-2">University of Lynchburg Campus Life Hub</h1>
+        <p class="mb-0 text-secondary">
+          Stay up to date with campus announcements, Hornet student events, and dining options
+          across Burton Dining Hall, The Westover Room, The Daiki Box, and nearby spots.
+        </p>
+      </section>
+      <!--Announcements and Updates -->
+      <section id="announcements" class="p-4 mb-4 border border-secondary rounded">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2 class="h4 mb-0">Announcements Updates</h2>
+          <span class="badge text-bg-secondary">Hornet Updates</span>
+        </div>
+        <ul id="announcements-list" class="list-group list-group-flush">
+          <li class="list-group-item bg-transparent text-light border-secondary px-0">
+            <strong>Finals Prep Study Hours:</strong> Extended study spaces and resources at Knight-Capron Library ahead of exams.
+          </li>
+          <li class="list-group-item bg-transparent text-light border-secondary px-0">
+            <strong>Dining Dollars Hornet Bucks:</strong> Mobile ordering available at The Westover Room and The Daiki Box, plus select off-campus partners.
+          </li>
+          <li class="list-group-item bg-transparent text-light border-secondary px-0">
+            <strong>Campus Engagement:</strong> Check out upcoming student activities and wellness events hosted on campus.
+          </li>
+        </ul>
+      </section>
+      <!-- Featured Events -->
+       <section id="featured-events" class="mb-4">
+        <h2 class="h4 mb-3">Featured Events</h2>
+        <div class="row g-3">
+          <!--Event Card 1 -->
+          <div class="col-md-4">
+            <div class="card h-100 bg-transparent text-light border-secondary">
+              <div class="card-body d-flex flex-column">
+                <span class="badge text-bg-primary align-self-start mb-2">Academic</span>
+                <h3 class="h5 card-title">Final Exams  Study Sessions</h3>
+                <p class="card-text text-secondary small flex-grow-1">
+                  Review schedules, reserve group study time, and prep for end-of-semester finals.
+                </p>
+                <a href="event.html" class="btn btn-outline-light btn-sm mt-2">View Event</a>
+              </div>
+            </div>
+        </div>
+        <!-- Event Card 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 bg-transparent text-light border-secondary">
+            <div class="card-body d-flex flex-column">
+              <span class="badge text-bg-success align-self-start mb-2">Social</span>
+              <h3 class="h5 card-title">Destress Fest (Drysdale)</h3>
+              <p class="card-text text-secondary small flex-grow-1">
+                Take a break before finals with Campus Engagement and HornetCare activities in Drysdale.
+              </p>
+              <a href="event.html" class="btn btn-outline-light btn-sm mt-2">View Event</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Event Card 3 -->
+        <div class="col-md-4">
+          <div class="card h-100 bg-transparent text-light border-secondary">
+            <div class="card-body d-flex flex-column">
+              <span class="badge text-bg-warning align-self-start mb-2">Social</span>
+              <h3 class="h5 card-title">Christmas Ornament Crafting</h3>
+              <p class="card-text text-secondary small flex-grow-1">
+                Drop in for a seasonal student craft session and unwind with fellow Hornets.
+              </p>
+              <a href="event.html" class="btn btn-outline-light btn-sm mt-2">View Event</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    </main>
 
     <footer class="border-top py-3 mt-5">
         <div class="container">
