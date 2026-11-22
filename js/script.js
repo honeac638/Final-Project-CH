@@ -1,6 +1,6 @@
 console.log("script.js connected!");
 
-// 1. Filter events on event.html by category (All, Academic, Social)
+//Filter events on event.html by category (All, Academic, Social)
 const filterButtons = document.querySelectorAll("[data-filter]");
 const eventItems = document.querySelectorAll(".event-item");
 
@@ -21,3 +21,32 @@ filterButtons.forEach((button) => {
     });
   });
 });
+
+const DINING_API_URL = "https://nominatim.openstreetmap.org/search";
+
+async function fetchDiningSpots(query = "food") {
+  const container = document.getElementById("dining-api-list");
+
+  try {
+    const url = `${DINING_API_URL}?format=json&limit=3&q=${encodeURIComponent(query + " Lynchburg VA")}`;
+    const res = await fetch(url);
+    const data = await res.json();
+
+    if (container) {
+      container.innerHTML = "";
+      data.forEach((place) => {
+        const item = document.createElement("p");
+        item.className = "small mb-1";
+        item.textContent = place.display_name;
+        container.appendChild(item);
+      });
+    }
+  } catch (err) {
+    console.log("API placeholder fallback:", err);
+    if (container) {
+      container.innerHTML = `<p class="text-secondary small mb-0">Placeholder: Burton Dining Hall, The Westover Room (Lynchburg, VA)</p>`;
+    }
+  }
+}
+
+fetchDiningSpots();

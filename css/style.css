@@ -1,13 +1,14 @@
-
+/* Dark theme page background*/
 body {
   background-color: #1a1a24;
   color: #f8f9fa;
 }
+/* Elevated dark surface color for sections and cards */
 section,
 .card {
   background-color: #232332;
 }
-
+/* 7-column grid layout for the monthly calendar on event.html */
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
