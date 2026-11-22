@@ -8,22 +8,197 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
-        <div class="container">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
-                <li class="nav-item"><a class="nav-link" href="dining.html">Dining</a></li>
-            </ul>
-        </div>
+  <header>
+    <nav class="navbar navbar-expand navbar-dark border-bottom border-secondary">
+      <div class="container">
+        <ul class="navbar-nav w-100 justify-content-around">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+           <a class="nav-link active fw-semibold" aria-current="page" href="event.html">event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Dining.html">Dining</a>
+          </li>
+        </ul>
+      </div>
     </nav>
+  </header>
+  <!-- Main Content Container -->
+  <main class="container my-4 flex-grow-1">
+  <!-- Filter Controls Section (All, Academic, Social) -->
+    <section id="event-filters" class="p-4 mb-4 border border-secondary rounded">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <h1 class="h4 mb-0">Campus Local Events</h1>
+          <div class="btn-group" role="group" aria-label="Event category filters">
+            <button type="button" class="btn btn-outline-light active" data-filter="All">All</button>
+            <button type="button" class="btn btn-outline-light" data-filter="Academic">Academic</button>
+            <button type="button" class="btn btn-outline-light" data-filter="Social">Social</button>
+          </div>
+      </div>
+    </section>
+    <!--Event List + Calendar -->
+    <div class="row g-4">
 
-    <footer class="border-top py-3 mt-5">
-        <div class="container">
-            <a href="index.html">Footer — Back to Home</a>
+      <!-- Events Listed  -->
+      <section id="events-list-section" class="col-lg-8 p-4 border border-secondary rounded">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2 class="h5 mb-0">Upcoming Schedule</h2>
+          <div class="badge text-bg-secondary">Nov – Dec 2026</div>
         </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+
+        <div id="events-list" class="d-flex flex-column gap-3">
+          <!-- Event 1 -->
+          <article class="p-3 border border-secondary rounded event-item" data-category="Social">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <div>
+                <div class="badge text-bg-success mb-1">Social</div>
+                <h3 class="h6 mb-1">event</h3>
+                <p class="text-secondary small mb-0">event details</p>
+              </div>
+              <p class="text-secondary small text-nowrap">time</p>
+            </div>
+          </article>
+
+          <!-- Event 2 -->
+          <article class="p-3 border border-secondary rounded event-item" data-category="Academic">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <div>
+                <div class="badge text-bg-primary mb-1">Academic</div>
+                  <h3 class="h6 mb-1">event</h3>
+                  <p class="text-secondary small mb-0">event details</p>
+              </div>
+              <p class="text-secondary small text-nowrap">time</p>
+            </div>
+          </article>
+
+          <!-- Event 3 -->
+          <article class="p-3 border border-secondary rounded event-item" data-category="Social">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <div>
+                <div class="badge text-bg-success mb-1">Social</div>
+                <h3 class="h6 mb-1">event</h3>
+                <p class="text-secondary small mb-0">event details</p>
+              </div>
+              <p class="text-secondary small text-nowrap">time</p>
+            </div>
+          </article>
+
+          <!-- Event 4 -->
+          <article class="p-3 border border-secondary rounded event-item" data-category="Social">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <div>
+                <div class="badge text-bg-success mb-1">Social</div>
+                <h3 class="h6 mb-1">event</h3>
+                <p class="text-secondary small mb-0">event details</p>
+              </div>
+              <p class="text-secondary small text-nowrap">time</p>
+            </div>
+          </article>
+
+          <!-- Event 5 -->
+          <article class="p-3 border border-secondary rounded event-item" data-category="Academic">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <div>
+                <div class="badge text-bg-primary mb-1">Academic</div>
+                <h3 class="h6 mb-1">event</h3>
+                <p class="text-secondary small mb-0">event details</p>
+              </div>
+              <p class="text-secondary small text-nowrap">time</p>
+            </div>
+          </article>
+
+          <!-- Event 6 -->
+          <article class="p-3 border border-secondary rounded event-item" data-category="Academic">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <div>
+                <div class="badge text-bg-primary mb-1">Academic</div>
+                <h3 class="h6 mb-1">event</h3>
+                <p class="text-secondary small mb-0">event details</p>
+              </div>
+              <p class="text-secondary small text-nowrap">time</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Calendar Panel hell-->
+      <aside id="calendar-section" class="col-lg-4">
+        <div class="p-4 border border-secondary rounded">
+          <h2 class="h5 mb-3">Calendar</h2>
+          <div id="calendar-widget" class="p-3 border border-secondary rounded text-center">
+            <div class="fw-semibold mb-2">November 2026</div>
+
+            <!-- Day-of-week headers -->
+            <div class="calendar-grid small text-secondary mb-1">
+              <div>S</div>
+              <div>M</div>
+              <div>T</div>
+              <div>W</div>
+              <div>T</div>
+              <div>F</div>
+              <div>S</div>
+            </div>
+
+            <!-- November 2026 dates -->
+            <div class="calendar-grid small">
+              <div class="py-1">1</div>
+              <div class="py-1">2</div>
+              <div class="py-1">3</div>
+              <div class="py-1">4</div>
+              <div class="py-1">5</div>
+              <div class="py-1">6</div>
+              <div class="py-1">7</div>
+
+              <div class="py-1">8</div>
+              <div class="py-1">9</div>
+              <div class="py-1">10</div>
+              <div class="py-1">11</div>
+              <div class="py-1">12</div>
+              <div class="py-1">13</div>
+              <div class="py-1">14</div>
+
+              <div class="py-1">15</div>
+              <div class="py-1">16</div>
+              <div class="py-1">17</div>
+              <div class="py-1">18</div>
+              <div class="py-1">19</div>
+              <div class="py-1">20</div>
+              <div class="py-1 border border-info rounded fw-bold">21</div>
+
+              <div class="py-1">22</div>
+              <div class="py-1">23</div>
+              <div class="py-1">24</div>
+              <div class="py-1">25</div>
+              <div class="py-1">26</div>
+              <div class="py-1">27</div>
+              <div class="py-1">28</div>
+
+              <div class="py-1">29</div>
+              <div class="py-1">30</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- Footer (Links back to index.html) -->
+  <footer class="border-top border-secondary py-3 mt-auto">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html" class="text-decoration-none text-light fw-semibold">
+        Footer — Back to Home
+      </a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="js/script.js"></script>
 </body>
 </html>
