@@ -21,7 +21,7 @@ filterButtons.forEach((button) => {
     });
   });
 });
-
+//api call to get dining spots in Lynchburg, VA
 const DINING_API_URL = "https://nominatim.openstreetmap.org/search";
 
 async function fetchDiningSpots(query = "food") {
